@@ -31,24 +31,41 @@
         </header>
 
         <section class="information">
+
             <h2>Enter Subscriber Details</h2>
+
+            <p id="formMode">Add a new subscription.</p>
             <p>Fill in the subscription information below.</p>
 
             <form id="subscriptionForm">
 
-                <label>Subscriber Name</label>
-                <input type="text" id="subscriberName"
-                       placeholder="Enter subscriber name" required>
+                <label for="subscriberName">Subscriber Name</label>
+                <input
+                    type="text"
+                    id="subscriberName"
+                    placeholder="Enter subscriber name"
+                    required
+                >
 
-                <label>Email Address</label>
-                <input type="email" id="email"
-                       placeholder="Enter email address" required>
+                <label for="email">Email Address</label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter email address"
+                    required
+                >
 
-                <label>Phone Number</label>
-                <input type="tel" id="phone"
-                       placeholder="Enter phone number" required>
+                <label for="phone">Phone Number</label>
+                <input
+                    type="tel"
+                    id="phone"
+                    placeholder="Enter 10-digit phone number"
+                    pattern="[0-9]{10}"
+                    maxlength="10"
+                    required
+                >
 
-                <label>Subscription Type</label>
+                <label for="subscriptionType">Subscription Type</label>
                 <select id="subscriptionType" required>
                     <option value="">Select subscription type</option>
                     <option value="Monthly">Monthly</option>
@@ -56,20 +73,20 @@
                     <option value="Yearly">Yearly</option>
                 </select>
 
-                <label>Start Date</label>
+                <label for="startDate">Start Date</label>
                 <input type="date" id="startDate" required>
 
-                <label>Expiry Date</label>
+                <label for="expiryDate">Expiry Date</label>
                 <input type="date" id="expiryDate" required>
 
-                <label>Payment Status</label>
+                <label for="paymentStatus">Payment Status</label>
                 <select id="paymentStatus" required>
                     <option value="">Select payment status</option>
                     <option value="Paid">Paid</option>
-                    <option value="Pending">Pending</option>
+                    <option value="Unpaid">Unpaid</option>
                 </select>
 
-                <label>Current Status</label>
+                <label for="currentStatus">Current Status</label>
                 <select id="currentStatus" required>
                     <option value="">Select current status</option>
                     <option value="Active">Active</option>
@@ -77,16 +94,26 @@
                 </select>
 
                 <div class="action-buttons">
-                    <button type="submit">Save Subscription</button>
-                    <button type="reset" class="reset-btn">Clear Form</button>
+
+                    <button type="submit" id="saveButton">
+                        Save Subscription
+                    </button>
+
+                    <button type="reset" class="reset-btn">
+                        Clear Form
+                    </button>
+
                 </div>
 
             </form>
+
         </section>
 
     </main>
+
 </div>
 
 <script src="script.js"></script>
+
 </body>
 </html>
