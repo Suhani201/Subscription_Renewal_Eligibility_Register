@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Subscriptions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <aside class="sidebar">
+        <h2>Subscription<br>Register</h2>
+        <p class="subtitle">Renewal Management System</p>
+
+        <nav>
+            <a href="index.html">🏠 Dashboard</a>
+            <a href="add-subscription.html">➕ Add Subscription</a>
+            <a href="view-subscriptions.html" class="active">📋 View Subscriptions</a>
+            <a href="eligibility.html">🔍 Check Eligibility</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <h2>View Subscriptions</h2>
+            <div class="admin">Admin / Staff</div>
+        </header>
+
+        <section class="information">
+            <h2>Subscription Records</h2>
+            <p>View and search registered subscription details.</p>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search by subscriber name or email..."
+                style="width:100%; padding:13px; margin:20px 0; border:1px solid #cbd5e1; border-radius:6px;"
+            >
+
+            <div style="overflow-x:auto;">
+                <table style="width:100%; border-collapse:collapse; min-width:800px;">
+                    <thead>
+                        <tr style="background:#eaf0fb;">
+                            <th>Subscriber Name</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Subscription Type</th>
+                            <th>Start Date</th>
+                            <th>Expiry Date</th>
+                            <th>Payment</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="subscriptionTable">
+                        <tr>
+                            <td colspan="9" style="text-align:center; padding:25px;">
+                                No subscription records available.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

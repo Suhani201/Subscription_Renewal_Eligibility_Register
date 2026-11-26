@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Eligibility</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <aside class="sidebar">
+        <h2>Subscription<br>Register</h2>
+        <p class="subtitle">Renewal Management System</p>
+
+        <nav>
+            <a href="index.html">🏠 Dashboard</a>
+            <a href="add-subscription.html">➕ Add Subscription</a>
+            <a href="view-subscriptions.html">📋 View Subscriptions</a>
+            <a href="eligibility.html" class="active">🔍 Check Eligibility</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <h2>Check Eligibility</h2>
+            <div class="admin">Admin / Staff</div>
+        </header>
+
+        <section class="information">
+            <h2>Subscription Renewal Eligibility</h2>
+            <p>Enter the subscriber details to check renewal eligibility.</p>
+
+            <form id="eligibilityForm">
+
+                <label>Subscriber Email</label>
+                <input
+                    type="email"
+                    id="eligibilityEmail"
+                    placeholder="Enter registered email address"
+                    required
+                >
+
+                <label>Subscription ID (if available)</label>
+                <input
+                    type="text"
+                    id="subscriptionId"
+                    placeholder="Enter subscription ID"
+                >
+
+                <div class="action-buttons">
+                    <button type="submit">Check Eligibility</button>
+                    <button type="reset" class="reset-btn">Clear</button>
+                </div>
+
+            </form>
+
+            <div id="eligibilityResult" style="
+                margin-top:25px;
+                padding:20px;
+                background:#f4f6fb;
+                border-radius:8px;
+                display:none;
+            ">
+                <h3>Eligibility Result</h3>
+                <p id="resultMessage"></p>
+            </div>
+
+        </section>
+
+    </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
